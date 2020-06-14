@@ -1,0 +1,31 @@
+{
+    "users": [
+        {
+            "id":1,
+            "name": "Jiji",
+            "nickName": "Jiji",
+            "strengths":"Designated loud mouth, Basketball",
+            "weakness":"Staying calm, Being Silent",
+            "desc":"What's up bitches , Jiji is in the building !!",
+            "img":"https://source.unsplash.com/random/404x400"
+        },
+        {
+            "id":2,
+            "name": "Abdsamad",
+            "nickName": "Samad",
+            "strengths":"Professional pick up artist, No rattrapage",
+            "weakness":"Gymnastics, Metro 4",
+            "desc":"I am Abdsamad and I live in the real france #SaintGermin ",
+            "img":"https://source.unsplash.com/random/401x401"
+        },
+        {
+            "id":3,
+            "name": "Mehdi",
+            "nickName": "Loading ...",
+            "strengths":"Not killing jiji, sending meme",
+            "weakness":"Going to Sephora",
+            "desc": "My name is mehdi and I'm running for president",
+            "img":"https://source.unsplash.com/random/402x402"
+        }
+    ]
+}

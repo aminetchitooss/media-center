@@ -1,0 +1,26 @@
+<div class="user">
+    <div class="user__info">
+        <div *ngIf='user?.img' class="user__image" [ngClass]="{ 'pending': Imgloading }">
+            <img [src]="user?.img" (load)="loaded()">
+        </div>
+        <p>Nickname: <em> {{user?.nickName}}</em></p>
+        <p>Strengths:</p>
+        <ul>
+            <li *ngFor='let strength of user?.strengths?.split(",")'>
+                {{strength}}
+            </li>
+        </ul>
+        <p>Weakness:</p>
+        <ul>
+            <li *ngFor='let weakness of user?.weakness?.split(",")'>
+                {{weakness}}
+            </li>
+        </ul>
+        <p>Starts a conversation by saying: <br> <em>{{user?.desc}}</em></p>
+    </div>
+    <div class="user__gallery">
+        <div class="user__gallery__memory" *ngFor='let memory of memoryList'>
+            <video src="{{memory.src}}" controls></video>
+        </div>
+    </div>
+</div>

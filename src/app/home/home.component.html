@@ -1,0 +1,13 @@
+<div class="choice">
+    <p class="choice__label">Pick a warrior</p>
+    <div class="choice__list">
+        <div class="choice__list__profil" *ngFor='let user of userList' (click)="choose(user)">
+            <div class="choice__list__profil__image" [ngClass]="{ 'pending': loading }">
+                <img [src]="user.img" (load)="loaded()">
+            </div>
+            <div class="choice__list__profil__name">
+                <p>{{user.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
