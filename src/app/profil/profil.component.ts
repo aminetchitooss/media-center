@@ -14,7 +14,7 @@ export class ProfilComponent implements OnInit {
 
   constructor(public route: ActivatedRoute, public hs: HttpService) { }
   userId
-  user = {}
+  user: any = {}
   memoryList = [
     // "https://picsum.photos/500/200"
   ]
