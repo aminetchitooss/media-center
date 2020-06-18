@@ -1,1 +1,28 @@
-<p>movies works!</p>
+<div id="tt" class="frame">
+    <div class="frame__label">
+        <p>My collection</p>
+    </div>
+    <div class="frame__movieList">
+        <div class="frame__movieList__item" *ngFor='let movie of movieList' (click)='watch(movie)'>
+            <div class="frame__movieList__item__image" [ngClass]="{ 'pending': loading }">
+                <img src="{{movie.Poster}}" (load)="loaded()" />
+            </div>
+            <i class="fa fa-play" [ngClass]="{ 'loading': loading }"></i>
+            <div class="frame__movieList__item__rating">
+                <p>{{movie?.rating ? movie?.rating : '...'}}</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal-container">
+        <div class="modal-background">
+            <div class="modal">
+                <video controls autoplay *ngIf='movieChosen'>
+                    <source src="{{movieChosen}}"  >
+                </video>
+                <div class="modal__image" (click)='close()'>
+                    <img src="assets/images/close.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

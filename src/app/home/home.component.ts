@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   currentUser = {}
   ngOnInit() {
     this.hs.getFakeService().subscribe((res: any) => {
+      this.hs.hideLoader()
       this.userList = res.users
       // const vUser = this.ds.getCurrentUser()
       // if (vUser.id)

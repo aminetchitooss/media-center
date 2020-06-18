@@ -1,12 +1,14 @@
 @import "../../variables.scss";
 
+$sideBarWidth: 350px;
+$marginGallery: 1rem;
+
 .user {
   display: flex;
-  //   align-items: center;
   justify-content: space-between;
   font-size: 1.3rem;
-  min-height: calc(100vh - 125px);
 
+  flex-wrap: wrap;
   &__image {
     display: flex;
     align-items: center;
@@ -22,8 +24,7 @@
   }
 
   &__info {
-    width: 100%;
-    max-width: 420px;
+    width: $sideBarWidth;
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 100%;
     p {
@@ -45,16 +46,35 @@
   }
 
   &__gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: calc(100% - #{$sideBarWidth});
 
+    &__title {
+      margin-left: $marginGallery !important;
+    }
     &__memory {
-      width: 100%;
-      max-width: 400px;
+      display: grid;
+      grid-gap: $marginGallery;
+      margin: $marginGallery;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-auto-rows: 305px;
+      grid-auto-flow: dense; /* Fill all spaces with fitted images */
 
-      video {
-        width: 100%;
+      &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        video {
+          width: 100%;
+          height: calc(100% - 40px);
+          object-fit: cover;
+          border: 1px solid black;
+        }
+        p {
+          text-decoration: underline;
+          color: lightgray;
+        }
       }
     }
   }
@@ -63,4 +83,52 @@ em,
 li {
   color: $accent;
   font-style: italic;
+}
+@media (max-width: $maxWidthPhone) {
+  .user {
+    min-height: calc(100vh - 125px);
+
+    &__info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100% !important;
+    }
+    &__gallery {
+      width: 100% !important;
+    }
+  }
+}
+@media (min-width: 608px) {
+  .item6,
+  .item4,
+  .item9,
+  .horizontal {
+    grid-column: span 2;
+  }
+
+  .vertical,
+  .item3 {
+    grid-row: span 2;
+  }
+
+  .item1,
+  .item5,
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+@media (min-width: $minWidthDesk) {
+  .user {
+    height: calc(100vh - 125px);
+    &__gallery {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+}
+
+/* Grid */
+.container {
 }

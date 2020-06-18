@@ -7,6 +7,8 @@ $heightFooter: 60px;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  
   &__title {
     font-size: 3.5rem;
     height: 125px;
@@ -76,7 +78,7 @@ $heightFooter: 60px;
   opacity: 1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $maxWidthPhone) {
   .header__title {
     font-size: 2.5rem;
     height: 100px;
@@ -84,11 +86,11 @@ $heightFooter: 60px;
   .header__nav {
     display: none;
   }
-  .content {
+  .route {
     padding-bottom: $heightFooter;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $minWidthDesk) {
   .header__link {
     display: block;
   }

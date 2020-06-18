@@ -7,7 +7,7 @@
             "strengths":"Designated loud mouth, Basketball",
             "weakness":"Staying calm, Being Silent",
             "desc":"What's up bitches , Jiji is in the building !!",
-            "img":"https://source.unsplash.com/random/404x400"
+            "img":"assets/images/profile_1.png"
         },
         {
             "id":2,
@@ -16,16 +16,16 @@
             "strengths":"Professional pick up artist, No rattrapage",
             "weakness":"Gymnastics, Metro 4",
             "desc":"I am Abdsamad and I live in the real france #SaintGermin ",
-            "img":"https://source.unsplash.com/random/401x401"
+            "img":"assets/images/profile_2.jpg"
         },
         {
             "id":3,
             "name": "Mehdi",
             "nickName": "Loading ...",
-            "strengths":"Not killing jiji, sending meme",
+            "strengths":"Sending meme, Not killing jiji",
             "weakness":"Going to Sephora",
             "desc": "My name is mehdi and I'm running for president",
-            "img":"https://source.unsplash.com/random/402x402"
+            "img":"assets/images/profile_3.jpg"
         }
     ]
 }
