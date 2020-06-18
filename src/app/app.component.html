@@ -1,8 +1,8 @@
 <div class="header">
-    <p class="header__title" routerLink="home" >
+    <p class="header__title" routerLink="home">
         Tchitos' World
     </p>
-    <div  class="header__nav">
+    <div class="header__nav">
         <a class="header__nav__link" *ngIf='checkProfilSelected()' routerLink="profil/{{userId}}"
             routerLinkActive="routerActiveHeader">Profil</a>
         <a class="header__nav__link" routerLink="movies" routerLinkActive="routerActiveHeader">Movies</a>
