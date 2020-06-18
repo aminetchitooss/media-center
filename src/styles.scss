@@ -28,7 +28,7 @@ $media-center-theme: mat-light-theme($media-center-primary, $media-center-accent
 /* You can add global styles to this file, and also import other style files */
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
-@import './variables.scss';
+@import "./variables.scss";
 
 body,
 html {
@@ -683,4 +683,7 @@ video {
     background: white;
     padding: 40px;
   }
+}
+a {
+  color: white;
 }

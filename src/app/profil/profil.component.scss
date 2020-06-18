@@ -61,19 +61,20 @@ $marginGallery: 1rem;
 
       &__items {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
-
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 3px black;
         video {
-          width: 100%;
-          height: calc(100% - 40px);
+          width: calc(100% - 20px);
+          height: calc(100% - 60px);
           object-fit: cover;
           border: 1px solid black;
         }
         p {
-          text-decoration: underline;
-          color: lightgray;
+          color: $primary;
+          margin-top: 15px;
         }
       }
     }
@@ -127,8 +128,4 @@ li {
       overflow-y: auto;
     }
   }
-}
-
-/* Grid */
-.container {
 }

@@ -3,9 +3,9 @@
         Tchitos' World
     </p>
     <div  class="header__nav">
-        <p class="header__nav__link" *ngIf='checkProfilSelected()' routerLink="profil/{{userId}}"
-            routerLinkActive="routerActiveHeader">Profil</p>
-        <p class="header__nav__link" routerLink="movies" routerLinkActive="routerActiveHeader">Movies</p>
+        <a class="header__nav__link" *ngIf='checkProfilSelected()' routerLink="profil/{{userId}}"
+            routerLinkActive="routerActiveHeader">Profil</a>
+        <a class="header__nav__link" routerLink="movies" routerLinkActive="routerActiveHeader">Movies</a>
     </div>
 </div>
 <div class="route">

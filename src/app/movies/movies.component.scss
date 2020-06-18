@@ -16,6 +16,8 @@
     flex-wrap: wrap;
 
     &__item {
+      display: flex;
+      justify-content: center;
       position: relative;
       cursor: pointer;
       float: left;
@@ -43,10 +45,10 @@
         top: 10px;
       }
 
-      img {
-        max-height: 420px;
-        max-width: 300px;
-      }
+      // img {
+      //   max-height: 420px;
+      //   max-width: 300px;
+      // }
       i {
         position: absolute;
         top: 50%;
@@ -129,7 +131,8 @@ video {
       width: 20px;
     }
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       transform: rotate(180deg);
       transition: transform 0.5s;
     }
@@ -139,5 +142,19 @@ video {
 @media (max-width: $maxWidthPhone) {
   .modal__image {
     right: -8px;
+  }
+  .frame {
+    padding: 10px 25px;
+
+    &__movieList__item {
+      &__rating {
+        right: 0;
+      }
+      &__image {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
