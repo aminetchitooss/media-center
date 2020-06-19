@@ -1,35 +1,23 @@
-<div class="user">
-    <div class="user__info" [@XToRight]>
-        <div *ngIf='user?.img' class="user__image" [ngClass]="{ 'pending': Imgloading }">
-            <img [src]="user?.img" (load)="loaded()">
-        </div>
-        <p>Nickname: <em> {{user?.nickName}}</em></p>
-        <div>
-            <p>Strengths:</p>
-            <ul>
-                <li *ngFor='let strength of user?.strengths?.split(",")'>
-                    {{strength}}
-                </li>
-            </ul>
-        </div>
-        <div>
-            <p>Weakness:</p>
-            <ul>
-                <li *ngFor='let weakness of user?.weakness?.split(",")'>
-                    {{weakness}}
-                </li>
-            </ul>
-        </div>
-        <p>Starts a conversation by saying: <br> <em>{{user?.desc}}</em></p>
+<div class="user" [@XToRight] *ngIf='dataLoaded'>
+    <div *ngIf='user?.img' class="user__image" [ngClass]="{ 'pending': Imgloading }">
+        <img [src]="user?.img" (load)="loaded()">
     </div>
-    <div class="user__gallery" [@YToTop]>
-        <h2 class="user__gallery__title">Memories: </h2>
-        <div class="user__gallery__memory">
-            <div *ngFor='let memory of memoryList; let i=index' class="user__gallery__memory__items item{{i+1}}" >
-                <video src="{{memory.path}}" controls></video>
-                <p>{{memory.title}}</p>
-            </div>
-        </div>
-
+    <p>Nickname: <em> {{user?.nickName}}</em></p>
+    <div class="user__quality">
+        <p>Strengths:</p>
+        <ul>
+            <li *ngFor='let strength of user?.strengths?.split(",")'>
+                {{strength}}
+            </li>
+        </ul>
     </div>
+    <div class="user__quality">
+        <p>Weakness:</p>
+        <ul>
+            <li *ngFor='let weakness of user?.weakness?.split(",")'>
+                {{weakness}}
+            </li>
+        </ul>
+    </div>
+    <p>Starts a conversation by saying: <br> <em>{{user?.desc}}</em></p>
 </div>

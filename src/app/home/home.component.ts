@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../shared/services/http.service';
 import { DataService } from '../shared/services/data.service';
 import { Router } from '@angular/router';
+import { YToTop } from '../shared/animation';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [YToTop]
+
 })
 export class HomeComponent implements OnInit {
 

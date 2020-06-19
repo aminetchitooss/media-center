@@ -1,14 +1,23 @@
 @import "../../variables.scss";
 
-$sideBarWidth: 350px;
-$marginGallery: 1rem;
-
 .user {
-  display: flex;
-  justify-content: space-between;
   font-size: 1.3rem;
+  margin: 15px 25px 0;
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.8rem;
+  p:last-child {
+    margin-bottom: 13px;
+    em {
+      top: 7px;
+      position: relative;
+    }
+  }
+  ul {
+    margin: 5px 0;
+  }
 
-  flex-wrap: wrap;
   &__image {
     display: flex;
     align-items: center;
@@ -16,116 +25,14 @@ $marginGallery: 1rem;
     height: 150px;
     overflow: hidden;
     border-radius: 26px;
-    margin: 30px 0 20px 45px;
-
     img {
       max-width: 100%;
     }
   }
-
-  &__info {
-    width: $sideBarWidth;
-    background-color: rgba(0, 0, 0, 0.3);
-    min-height: 100%;
-    p {
-      padding: 10px 0;
-      padding-left: 45px;
-      max-width: 300px;
-    }
-    p:last-child {
-      margin-bottom: 13px;
-      em {
-        top: 7px;
-        position: relative;
-      }
-    }
-    ul {
-      padding-left: 75px;
-      margin: 5px 0;
-    }
-  }
-
-  &__gallery {
-    width: calc(100% - #{$sideBarWidth});
-
-    &__title {
-      margin-left: $marginGallery !important;
-    }
-    &__memory {
-      display: grid;
-      grid-gap: $marginGallery;
-      margin: $marginGallery;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-auto-rows: 305px;
-      grid-auto-flow: dense; /* Fill all spaces with fitted images */
-
-      &__items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px 3px black;
-        video {
-          width: calc(100% - 20px);
-          height: calc(100% - 60px);
-          object-fit: cover;
-          border: 1px solid black;
-        }
-        p {
-          color: $primary;
-          margin-top: 15px;
-        }
-      }
-    }
-  }
+  
 }
 em,
 li {
   color: $accent;
   font-style: italic;
-}
-@media (max-width: $maxWidthPhone) {
-  .user {
-    min-height: calc(100vh - 125px);
-
-    &__info {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100% !important;
-    }
-    &__gallery {
-      width: 100% !important;
-    }
-  }
-}
-@media (min-width: 608px) {
-  .item6,
-  .item4,
-  .item9,
-  .horizontal {
-    grid-column: span 2;
-  }
-
-  .vertical,
-  .item3 {
-    grid-row: span 2;
-  }
-
-  .item1,
-  .item5,
-  .big {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-}
-@media (min-width: $minWidthDesk) {
-  .user {
-    height: calc(100vh - 125px);
-    &__gallery {
-      height: 100%;
-      overflow-y: auto;
-    }
-  }
 }

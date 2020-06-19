@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   userId
 
   ngOnInit() {
+    console.log('1')
   }
 
   checkProfilSelected() {

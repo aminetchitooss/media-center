@@ -9,7 +9,7 @@ export class HttpService {
 
   constructor(public http: HttpClient, public loader: LoaderService) { }
 
-  url = 'http://localhost:3000/'
+  url = 'https://12de13115e47.ngrok.io/'
 
   getFakeService() {
     this.loader.show()

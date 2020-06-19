@@ -44,7 +44,7 @@ export class MoviesComponent implements OnInit {
 
 
   watch(movie) {
-    this.movieChosen = movie.path
+    this.movieChosen = this.hs.url + movie.path
     $('#modal-container').addClass(this.anim);
     $('#tt').addClass('modal-active');
   }

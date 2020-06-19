@@ -17,7 +17,7 @@ export const SmoothY = trigger(
 export const YToTop = trigger(
   'YToTop', [
     transition(':enter', [
-      style({ transform: 'translateY(50%)', opacity: 0 }),
+      style({ transform: 'translateY(10%)', opacity: 0 }),
       animate('300ms', style({ transform: 'translateY(0)', opacity: 1 }))
     ])
   ]);
@@ -25,6 +25,13 @@ export const XToRight = trigger(
   'XToRight', [
     transition(':enter', [
       style({ transform: 'translateX(-50%)', opacity: 0 }),
+      animate('300ms', style({ transform: 'translateX(0)', opacity: 1 }))
+    ])
+  ]);
+export const XToLeft = trigger(
+  'XToLeft', [
+    transition(':enter', [
+      style({ transform: 'translateX(50%)', opacity: 0 }),
       animate('300ms', style({ transform: 'translateX(0)', opacity: 1 }))
     ])
   ]);

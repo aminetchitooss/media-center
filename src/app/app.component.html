@@ -5,6 +5,7 @@
     <div class="header__nav">
         <a class="header__nav__link" *ngIf='checkProfilSelected()' routerLink="profil/{{userId}}"
             routerLinkActive="routerActiveHeader">Profil</a>
+        <a class="header__nav__link" routerLink="memories" routerLinkActive="routerActiveHeader">Memories</a>
         <a class="header__nav__link" routerLink="movies" routerLinkActive="routerActiveHeader">Movies</a>
     </div>
 </div>
@@ -17,9 +18,13 @@
         <img src="assets/images/user.png">
         <p>Profil</p>
     </div>
-    <div class="footer__link" routerLink="home" routerLinkActive="routerActiveFooter">
-        <img src="assets/images/home.png">
-        <p>Home</p>
+    <div class="footer__link gang" routerLink="home" routerLinkActive="routerActiveFooter">
+        <img src="assets/images/gang.png">
+        <p>Gang</p>
+    </div>
+    <div class="footer__link" routerLink="memories" routerLinkActive="routerActiveFooter">
+        <img src="assets/images/gallery.png">
+        <p>Memories</p>
     </div>
     <div class="footer__link" routerLink="movies" routerLinkActive="routerActiveFooter">
         <img src="assets/images/movie.png">

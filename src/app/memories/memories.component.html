@@ -1,1 +1,11 @@
-<p>memories works!</p>
+<div class="user">
+    <div class="user__gallery" [@YToTop]>
+        <h2 class="user__gallery__title">Memories: </h2>
+        <div class="user__gallery__memory">
+            <div *ngFor='let memory of memoryList; let i=index' class="user__gallery__memory__items item{{i+1}}">
+                <video src="{{memory.path}}" controls></video>
+                <p>{{memory.title}}</p>
+            </div>
+        </div>
+    </div>
+</div>
